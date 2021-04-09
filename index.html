@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container" >
+    <div class="container" id="cv-form">
       <h1 class="text-center my-2">Resume Generator</h1>
       <p class="text-center">By Abhishek Mishra</p>
 
@@ -82,9 +82,11 @@
         <div class="col-md-6">
           <!-- second col -->
           <h3>professional Information</h3>
+
           <div class="form-gruop mt-2">
             <label for="">Objective</label>
             <textarea
+            id="objectiveField"
               placeholder="Enter Here"
               class="form-control"
               rows="5"
@@ -100,7 +102,9 @@
             <!-- new textarea come -->
 
             <div class="container text-center mt-2" id="weAddButton">
-              <button onclick="addNewWEField()" class="btn btn-primary btn-sm">Add</button>
+              <button onclick="addNewWEField()" class="btn btn-primary btn-sm">
+                Add
+              </button>
             </div>
           </div>
           <div class="form-gruop mt-2" id="aq">
@@ -112,13 +116,132 @@
             ></textarea>
 
             <div class="container text-center mt-2" id="aqAddButton">
-              <button onclick="addNewAQField()" class="btn btn-primary btn-sm">Add</button>
+              <button onclick="addNewAQField()" class="btn btn-primary btn-sm">
+                Add
+              </button>
             </div>
           </div>
         </div>
       </div>
       <div class="container text-center mt-3">
-        <button class="btn btn-primary btn-lg">Generate Cv</button>
+        <button onclick="generateCV()" class="btn btn-primary btn-lg">Generate Cv</button>
+      </div>
+    </div>
+
+    <!-- cv template -->
+
+    <div class="container" id="cv-template">
+      <div class="row">
+        <div class="col-md-4 text-center py-5 background">
+          <!-- this is first col -->
+
+          <img
+            src="https://st.depositphotos.com/2101611/3925/v/600/depositphotos_39258143-stock-illustration-businessman-avatar-profile-picture.jpg"
+            alt="Person"
+            class="img-fluid myimg"
+          />
+
+          <div class="container">
+            <p id="nameT1">Abhishek Mishra</p>
+            <p id="phoneT">+918655666021</p>
+            <p id="addressT">room no 1 mumbai , INDIA</p>
+
+            <hr />
+            <p>
+              <a id="fbT" href="https://www.facebook.com/profile.php?id=100009620779558"
+                >Facebook</a
+              >
+            </p>
+            <p>
+              <a id="instaT" href="https://www.instagram.com/abhi____2425/">Instagram</a>
+            </p>
+            <p>
+              <a  id="linkedT" href="https://www.linkedin.com/in/abhishek-mishra-1027b8177/"
+                >LinkedIn</a
+              >
+            </p>
+          </div>
+        </div>
+        <div class="col-md-8 pyt-5">
+          <!-- this is second col -->
+          <h1 id="nameT2" class="text-center" style="font-weight: 980">Abhishek Mishra</h1>
+
+          <!-- objective card -->
+          <div class="card mt-4">
+            <div class="card-header background">
+              <h3>Objective</h3>
+            </div>
+            <div class="card-body">
+              <p id="objectiveT">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Explicabo deleniti, asperiores quos nihil reprehenderit quod
+                dicta veniam. Est, corporis. Iusto facere ipsum sunt quisquam
+                vero animi enim eius sapiente voluptatem? Distinctio repudiandae
+                aperiam explicabo temporibus nesciunt non labore aliquid,
+                laboriosam, recusandae in optio perferendis doloremque maiores
+                voluptatem natus molestias magnam!
+              </p>
+            </div>
+          </div>
+
+          <!-- work Experience -->
+          <div class="card mt-4">
+            <div class="card-header background">
+              <h3>Work Experience</h3>
+            </div>
+            <div class="card-body">
+              <ul id="weT">
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Atque, placeat!
+                </li>
+              </ul>
+              <!-- <ul>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Atque, placeat!
+                </li>
+              </ul> -->
+              <!-- <ul>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Atque, placeat!
+                </li>
+              </ul> -->
+            </div>
+          </div>
+
+          <!-- adcademic qualification -->
+          <div class="card mt-4">
+            <div class="card-header background">
+              <h3>Academic Qualifiction</h3>
+            </div>
+            <div class="card-body">
+              <ul id="aqT">
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Atque, placeat!
+                </li>
+              </ul>
+              <!-- <ul>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Atque, placeat!
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Atque, placeat!
+                </li>
+              </ul> -->
+            </div>
+          </div>
+
+          <div class="container mt-3 text-center">
+            <button  onclick="printCV()" class="btn background">Print CV</button>
+          </div>
+        </div>
       </div>
     </div>
 
